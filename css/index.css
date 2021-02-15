@@ -498,8 +498,8 @@ p {
 }
 
 .bg-div {
-  -webkit-animation: bg-animate 10s alternate infinite;
-          animation: bg-animate 10s alternate infinite;
+  -webkit-animation: bg-animate 5s alternate infinite;
+          animation: bg-animate 5s alternate infinite;
 }
 
 @-webkit-keyframes bg-animate {
