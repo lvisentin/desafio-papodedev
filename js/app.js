@@ -1,8 +1,6 @@
 let timeLine = new TimelineMax();
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('.posts-section').style.display = 'none';
-
     timeLine
         .fromTo('.bg-loader', 1,
             { width: '100%' },
@@ -19,10 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-setTimeout(() => {
-    document.querySelector('.posts-section').style.display = 'block';
-
-    timeLine.fromTo('.posts-section', 1,
-        { y: -50, opacity: 0 },
-        { y: 0, opacity: 1, ease: Expo.easeInOut }, '-=0.7')
+setTimeout(async () => {
+    await timeLine.fromTo('.posts-section', 1,
+    { y: -50, opacity: 0 },
+    { y: 0, opacity: 1, ease: Expo.easeInOut }, '-=0.7')
 }, 3000);
