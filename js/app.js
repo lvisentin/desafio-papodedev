@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('ahahah')
-    document.querySelector('.posts-section').style.height = '0%';
+    // document.querySelector('.posts-section').style.height = '0%';
     let timeLine = new TimelineMax();
 
     timeLine
         .fromTo('.bg-loader', 1,
             { width: '100%' },
-            { width: '0%', delay: 5, ease: Expo.easeInOut })
+            { width: '0%', delay: 3, ease: Expo.easeInOut })
         .fromTo('.posts-section', 1,
             { height: '0%' },
             { height: '100%', ease: Expo.easeInOut }, '-=0.7')
