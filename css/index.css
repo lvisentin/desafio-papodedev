@@ -370,7 +370,7 @@ p {
 
 .posts-section {
   max-width: 500px;
-  margin: 20px 10px 0;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -379,6 +379,7 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   background: white;
+  height: 100%;
   padding: 30px;
   border-radius: 30px;
 }
