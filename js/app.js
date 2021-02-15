@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .fromTo('.social-links', 1,
             { y: -50, opacity: 0 },
             { y: 0, opacity: 1, ease: Expo.easeInOut }, '-=0.7')
-            .fromTo('.posts-section', 1,
-    { y: -50, opacity: 0 },
-    { y: 0, opacity: 1, ease: Expo.easeInOut }, '-=0.7');
+        .fromTo('.notPosts', 1,
+            { y: -50, opacity: 0 },
+            { y: 0, opacity: 1, ease: Expo.easeInOut }, '-=0.7');
 });

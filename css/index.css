@@ -319,11 +319,11 @@
   color: white;
 }
 
-.section-profile {
+.profile {
+  padding-top: 30px;
   max-width: 1440px;
   margin: 0 auto;
   text-align: center;
-  padding: 20px;
 }
 
 .profile-img {
@@ -364,62 +364,25 @@ p {
 
 .post-section-title {
   color: #000;
+  margin: 0 0 20px;
   font-weight: 400;
 }
 
-.posts-section {
+.notPosts {
+  width: 100%;
   max-width: 500px;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   background: white;
-  height: 100%;
   padding: 30px;
-  border-radius: 30px;
+  margin: 0 auto;
+  height: calc(67vh - 18px);
+  margin-top: 20px;
+  border-radius: 30px 30px 0 0;
 }
 
-.posts-section .post {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.post-texts {
-  padding: 10px 20px;
-  width: 80%;
-}
-
-.post-img-div {
-  width: 20%;
-}
-
-.post-title {
-  color: #000;
-  font-size: 16px;
-  font-weight: 600;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.post-link {
-  font-weight: 400;
-  font-size: 13px;
-  color: #000;
-  width: 80%;
-  text-overflow: ellipsis;
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
+@media screen and (max-width: 565px) {
+  .notPosts {
+    height: 100%;
+  }
 }
 
 .btn-primary {
@@ -448,78 +411,6 @@ p {
   background: #DE2B34;
 }
 
-.bg-loader {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #FF3741;
-  z-index: 999;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
-}
-
-.engine-loading {
-  fill: white;
-  max-width: 80px;
-  -webkit-animation: rotate-engine 5s alternate infinite;
-          animation: rotate-engine 5s alternate infinite;
-}
-
-@-webkit-keyframes rotate-engine {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-
-@keyframes rotate-engine {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-
-.bg-div {
-  -webkit-animation: bg-animate 5s alternate infinite;
-          animation: bg-animate 5s alternate infinite;
-}
-
-@-webkit-keyframes bg-animate {
-  from {
-    background-position: center;
-  }
-  to {
-    background-position: bottom;
-  }
-}
-
-@keyframes bg-animate {
-  from {
-    background-position: center;
-  }
-  to {
-    background-position: bottom;
-  }
-}
-
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -528,9 +419,18 @@ p {
   outline: none;
 }
 
-html, body {
-  width: 100%;
+html {
   height: 100%;
+  height: 100vh;
+}
+
+body {
+  height: auto;
+  width: auto;
+  min-height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 img, svg {
@@ -541,6 +441,13 @@ img, svg {
 a {
   text-decoration: none;
   color: white;
+}
+
+body {
+  background-image: url(../assets/images/wallpaper.png);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-position: bottom;
 }
 
 .bg-div {
@@ -562,8 +469,6 @@ a {
   height: 100%;
   display: block;
   background: rgba(0, 0, 0, 0.3);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
 }
 
 iframe {
